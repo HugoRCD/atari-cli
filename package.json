@@ -1,0 +1,50 @@
+{
+  "name": "atari",
+  "version": "1.0.0",
+  "description": "Retro Atari games in your terminal",
+  "type": "module",
+  "bin": {
+    "atari": "./bin/atari.mjs"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "atari",
+    "games",
+    "terminal",
+    "cli",
+    "retro",
+    "arcade",
+    "snake",
+    "pong",
+    "breakout"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "citty": "^0.2.0",
+    "figlet": "^1.8.0",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "unbuild": "^3.5.0"
+  }
+}
